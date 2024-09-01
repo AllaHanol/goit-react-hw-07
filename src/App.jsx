@@ -5,13 +5,13 @@ import SearchBox from './components/SearchBox/SearchBox.jsx';
 import './App.css';
 import { useEffect } from 'react';
 import { fetchContacts } from './redux/contactsOps.js';
-import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from './redux/contactsSlice.js';
+import { useDispatch } from 'react-redux';
+
 
 const App = () => {
   const dispatch = useDispatch();
   
-  const { items, loading, error } = useSelector(getContacts);
+  
   
     useEffect(() => {
       dispatch(fetchContacts())
