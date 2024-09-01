@@ -18,3 +18,5 @@ export const filterValue = (state) =>
   state.filters.name;
 export const filtersReducer =
   filtersSlice.reducer;
+export const selectFilter = (state) =>
+  state.contacts.filters.name;
